@@ -37,7 +37,7 @@ img {
 #header {
     margin: auto;
     max-width: 900px;
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -51,6 +51,7 @@ img {
 .project-title{
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 
 input {
@@ -90,8 +91,11 @@ button {
 
 .search {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
+    margin: 10px 0;
+
+    
 }
 
 
