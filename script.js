@@ -44,7 +44,7 @@ async function weather(city) {
 
     // Fetching Icon
     const icon = data.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`
+    const iconUrl = `https://openweathermap.org/img/wn/${icon}@4x.png`
 
     // if(data.weather[0].main === "Rain")  {
     //      weather_img = data.weather[0].icon
