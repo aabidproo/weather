@@ -8,8 +8,7 @@
 
 /* Common CSS */
 body { 
-    /* background:linear-gradient(90deg, #03060c, #131d37); */
-    background-color: rgb(190, 197, 203);
+    background-color: rgb(166, 176, 185);
 }
 
 .logo {
@@ -37,12 +36,11 @@ img {
 #header {
     margin: auto;
     max-width: 900px;
-    /* height: 100px; */
+    height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgba(255, 255, 255, 0.152); */
     background-color: rgba(241, 241, 241, 0.683);
     padding: 10px 40px 10px 40px;
     border-radius: 5px;
@@ -60,7 +58,7 @@ input {
     border: none;
     font-size: 16px;
     font-weight: 300;
-    background-color: white;
+    background-color:rgb(190, 197, 204);
     color: rgb(59, 59, 59);
     border-radius: 100px;
 }
@@ -69,13 +67,11 @@ input::placeholder {
     color: rgb(105, 105, 105);
 }
 
-
-
 button {
     padding: 0 6px;
     height: 48px;
     border: none;
-    background-color: rgb(17, 102, 238);
+    background-color: rgb(23, 99, 220);
     border-radius: 2px;
     cursor: pointer;
     margin-left: 8px;
@@ -90,8 +86,6 @@ button {
 
 .search {
     display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
     align-items: flex-start;
     margin: 10px 0;
 }
@@ -103,8 +97,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(241, 241, 241, 0.943);
-    padding: 10px 40px 10px 40px; */
+
     border-radius: 5px;
     display: none;
 }
@@ -126,7 +119,7 @@ main {
 
 #weather {
     background-color: rgba(241, 241, 241, 0.683);
-    margin: 10px 0 10px 0;
+    margin: 0 0 5px 0;
     padding: 40px;
     border: none;
     border-radius: 5px;
@@ -137,7 +130,6 @@ main {
     color: rgb(59, 59, 59);
     font-size: 20px;
     line-height: 1.5;
-    /* backdrop-filter: blur(40px); */
 }
 
 #weather_img {
@@ -152,7 +144,7 @@ h1 {
 
 #weather_more_info {
     background-color: rgba(241, 241, 241, 0.683);
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     padding: 40px;
     border: none;
     border-radius: 5px;
@@ -163,7 +155,6 @@ h1 {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
-    /* backdrop-filter: blur(40px); */
 
 }
 
@@ -220,7 +211,6 @@ i {
     left: 0;
     width: 100%;
     background: white;
-    /* border: 1px solid #ccc; */
     border-radius: 4px;
     max-height: 250px;
     overflow-y: auto;
@@ -231,7 +221,6 @@ i {
 
 .suggestions div {
     padding: 8px;
-    /* border-bottom: 1px solid #eee; */
 }
 
 .suggestions div:hover {
