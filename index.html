@@ -21,42 +21,48 @@
                 <p><a href="weather.html" class="logo">SkyCast</a></p>
                 <p class="caption">prototype 1</p>
             </div>
-            <div class="search">
-                <input type="text" id="search_field" placeholder="Search city here">
-                <button><i id="search_btn" class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            <div style="position: relative;">
+                    <input type="text" id="search_field" placeholder="Search city here">
+                    <div class="suggestions"></div>
+                    <button><i id="search_btn" class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
         </div>
     </header>
-
+    
+    <div class="error-box">
+        <p class="error"> Invalid City name</p>
+    </div>
 
     <main>
-        <div id="weather">
-            <div id="weather_info">
-                <h1 id="temperature"></h1>
-                <p class="subtitle" id="city_name"></p>
-                <p class="subtitle" id="weather_type"></p>
-                <p class="subtitle" id="date"></p>
-            </div>
-            <img alt="weather_img" id="weather_img">
-        </div>
-
-        <div id="weather_more_info">
-            <div id="humidity">
-                <img src="https://i.postimg.cc/wMgRY08v/humidity.png" alt="humidity">
-                <p class="title">Humidity</p>
-                <p class="subtitle" id="humidity_data">234</p>
+        <div class="weather-app">
+            <div id="weather">
+                <div id="weather_info">
+                    <h1 id="temperature"></h1>
+                    <p class="subtitle" id="city_name"></p>
+                    <p class="subtitle" id="weather_type"></p>
+                    <p class="subtitle" id="date"></p>
+                </div>
+                <img alt="weather_img" id="weather_img">
             </div>
 
-            <div id="pressure">
-                <img src="https://i.postimg.cc/LXdZNmxj/pressure.png" alt="pressure">
-                <p class="title">Pressure</p>
-                <p class="subtitle" id="pressure_data">234</p>
-            </div>
+            <div id="weather_more_info">
+                <div id="humidity">
+                    <img src="https://i.postimg.cc/wMgRY08v/humidity.png" alt="humidity">
+                    <p class="title">Humidity</p>
+                    <p class="subtitle" id="humidity_data">234</p>
+                </div>
 
-            <div id="windspeed">
-                <img src="https://i.postimg.cc/KjfkGBx5/windspeed.png" alt="windspeed">
-                <p class="title">Windspeed</p>
-                <p class="subtitle" id="windspeed_data">87</p>
+                <div id="pressure">
+                    <img src="https://i.postimg.cc/LXdZNmxj/pressure.png" alt="pressure">
+                    <p class="title">Pressure</p>
+                    <p class="subtitle" id="pressure_data">234</p>
+                </div>
+
+                <div id="windspeed">
+                    <img src="https://i.postimg.cc/KjfkGBx5/windspeed.png" alt="windspeed">
+                    <p class="title">Windspeed</p>
+                    <p class="subtitle" id="windspeed_data">87</p>
+                </div>
             </div>
         </div>
 
