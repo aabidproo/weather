@@ -1,6 +1,5 @@
 const apiKey = "0cffae8f844690774eea74501ea57020"
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
-const geoApiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
 
 
 
@@ -41,10 +40,11 @@ async function weather(city) {
     const icon = data.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${icon}@4x.png`
 
-    // console.log(data);
+    console.log(data);
     document.querySelector("#city_name").innerHTML = data.name + ", " + data.sys.country;
     document.querySelector("#temperature").innerHTML = (data.main.temp).toFixed(0) + "°C";
     document.querySelector("#weather_type").innerHTML = data.weather[0].main;
+    document.querySelector("#weather_description").innerHTML = data.weather[0].description;
     document.querySelector("#humidity_data").innerHTML = data.main.humidity + "%";
     document.querySelector("#pressure_data").innerHTML = data.main.pressure + " hpa";
     document.querySelector("#windspeed_data").innerHTML = data.wind.speed + " m/s";
@@ -52,50 +52,6 @@ async function weather(city) {
     document.querySelector("#date").innerHTML = formattedDate;
     document.querySelector(".weather-app").style.display = "block"
 }
-
-
-
-// Fetch city suggestions using OpenWeather Geocoding API
-async function fetchCitySuggestions(query) {
-    try {
-        const response = await fetch(`${geoApiUrl}${query}&limit=5&appid=${apiKey}`);
-        if (!response.ok) {
-            throw new Error("Error fetching suggestions.");
-        }
-        return await response.json(); // Returns an array of cities
-    } catch (error) {
-        console.error(error);
-        return [];
-    }
-}
-
-// Event listener for search input
-document.querySelector("#search_field").addEventListener("input", async (e) => {
-    const query = e.target.value;
-    const suggestionsBox = document.querySelector(".suggestions");
-
-    suggestionsBox.innerHTML = ""; // Clear previous suggestions
-
-    if (query.length > 2) { // Fetch suggestions if input length > 2
-        const suggestions = await fetchCitySuggestions(query);
-
-        suggestions.forEach((city) => {
-            const suggestionItem = document.createElement("div");
-            suggestionItem.textContent = `${city.name}, ${city.country}`;
-            suggestionItem.style.padding = "16px";
-            suggestionItem.style.cursor = "pointer";
-
-            // Click event for selecting suggestion
-            suggestionItem.addEventListener("click", () => {
-                document.querySelector("#search_field").value = city.name;
-                weather(city.name); // Fetch weather for the selected city
-                suggestionsBox.innerHTML = ""; // Clear suggestions
-            });
-
-            suggestionsBox.appendChild(suggestionItem);
-        });
-    }
-});
 
 
 
