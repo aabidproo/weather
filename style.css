@@ -100,12 +100,15 @@ button {
 
     border-radius: 5px;
     display: none;
+    text-align: center;
 }
 
 .error-box p {
     font-size: 32px;
     font-weight: 300;
     color: rgb(117, 117, 117);
+    text-align: center;
+    padding: 12px, 0;
 }
 
 
